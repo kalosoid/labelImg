@@ -1019,7 +1019,7 @@ class MainWindow(QMainWindow, WindowMixin):
                 elif os.path.isfile(txtPath):
                     self.loadYOLOTXTByFilename(txtPath)
                 else:
-                    print('did not find any annotation..setting xml file to :'+self.prev_xmlPath)
+                    #print('did not find any annotation..setting xml file to :'+self.prev_xmlPath)
                     self.loadPascalXMLByFilename(self.prev_xmlPath)
             else:
                 xmlPath = os.path.splitext(filePath)[0] + XML_EXT
@@ -1029,7 +1029,7 @@ class MainWindow(QMainWindow, WindowMixin):
                 elif os.path.isfile(txtPath):
                     self.loadYOLOTXTByFilename(txtPath)
                 else:
-                    print('did not find any annotation..setting xml file')
+                    #print('did not find any annotation..setting xml file')
                     self.loadPascalXMLByFilename(xmlPath)                   
 
             self.setWindowTitle(__appname__ + ' ' + filePath)
